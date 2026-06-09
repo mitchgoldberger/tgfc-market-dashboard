@@ -1,0 +1,579 @@
+{
+ "refreshed": "2026-06-09",
+ "wow": {
+  "note": "Week-over-week basis by category: beef cutout = weekly boxed-beef report change from prior week; poultry = weekly chicken report change; pork carcass = vs ~1 week earlier in the daily 5-day table; slaughter = week-to-date vs prior week (this week shortened by Memorial Day); cash cattle = this week vs same period last week.",
+  "rows": [
+   [
+    "Beef — Choice cutout",
+    "$393.62/cwt",
+    0.77,
+    "$"
+   ],
+   [
+    "Beef — Select cutout",
+    "$383.61/cwt",
+    -3.48,
+    "$"
+   ],
+   [
+    "Pork — Carcass cutout",
+    "$99.11/cwt",
+    3.47,
+    "$"
+   ],
+   [
+    "Poultry — Whole bird",
+    "125.18¢/lb",
+    0.18,
+    "¢"
+   ],
+   [
+    "Poultry — B/S breast",
+    "137.35¢/lb",
+    -8.37,
+    "¢"
+   ],
+   [
+    "Cash cattle — Live steer",
+    "$256.38/cwt",
+    0.38,
+    "$"
+   ],
+   [
+    "Cattle slaughter (WTD)",
+    "434,000 hd",
+    -17.5,
+    "%"
+   ],
+   [
+    "Hog slaughter (WTD)",
+    "1,890,000 hd",
+    -18.1,
+    "%"
+   ],
+   [
+    "Chicken slaughter (WTD)",
+    "154,908,000 hd",
+    -11.1,
+    "%"
+   ]
+  ]
+ },
+ "beef": {
+  "source": "LM_XB403 · Daily Boxed Beef Cutout (PM)",
+  "asof": "2026-06-08",
+  "choice": 392.2,
+  "choiceChg": -0.5,
+  "select": 378.09,
+  "selectChg": -4.6,
+  "spread": 14.11,
+  "loads": 116,
+  "trim50": 198.42,
+  "avg5Choice": 393.62,
+  "avg5Select": 383.61,
+  "series": {
+   "labels": [
+    "6/01",
+    "6/02",
+    "6/03",
+    "6/04",
+    "6/05",
+    "6/08"
+   ],
+   "choice": [
+    392.83,
+    394.07,
+    395.86,
+    392.66,
+    392.7,
+    392.2
+   ],
+   "select": [
+    383.09,
+    384.81,
+    384.43,
+    383.04,
+    382.69,
+    378.09
+   ]
+  },
+  "primalsNote": "WoW (Choice) = today's Choice primal minus the weekly composite Choice average.",
+  "primals": [
+   [
+    "Rib",
+    567.47,
+    491.54,
+    556.7
+   ],
+   [
+    "Chuck",
+    332.5,
+    336.56,
+    336.8
+   ],
+   [
+    "Round",
+    333.1,
+    329.48,
+    333.91
+   ],
+   [
+    "Loin",
+    508.1,
+    482.9,
+    511.85
+   ],
+   [
+    "Brisket",
+    345.46,
+    338.84,
+    349.15
+   ],
+   [
+    "Short Plate",
+    296.94,
+    296.94,
+    301.29
+   ],
+   [
+    "Flank",
+    252.93,
+    247.99,
+    250.04
+   ]
+  ],
+  "trimLadderAsof": "wk ending 2026-05-29 · national FOB, fresh",
+  "trimLadderNote": "Boneless processing beef & trimmings, chemical-lean ladder (FOB plant). 92–94%, 75% and 73% had no reportable trades this week. Domestic FROZEN trim carries no reportable negotiated volume (all frozen grades = 0), so only fresh is shown. WoW not published per grade — week tone: trimmings sharply higher on light offerings.",
+  "trimLadder": [
+   [
+    "Trim 92–94%",
+    null
+   ],
+   [
+    "Trim 90%",
+    451.11
+   ],
+   [
+    "Trim 85%",
+    394.6
+   ],
+   [
+    "Trim 81%",
+    407.83
+   ],
+   [
+    "Trim 75%",
+    null
+   ],
+   [
+    "Trim 73%",
+    null
+   ],
+   [
+    "Trim 65%",
+    227.6
+   ],
+   [
+    "Trim 50%",
+    183.7
+   ]
+  ],
+  "grindsAsof": "wk avg ending 2026-06-05",
+  "grinds": [
+   [
+    "Ground Beef 73%",
+    347.98,
+    351.06
+   ],
+   [
+    "Ground Beef 75%",
+    408.02,
+    387.43
+   ],
+   [
+    "Ground Beef 81%",
+    407.11,
+    418.27
+   ],
+   [
+    "Ground Beef 85%",
+    468.4,
+    461.37
+   ],
+   [
+    "Ground Beef 93%",
+    556.07,
+    554.63
+   ],
+   [
+    "Ground Beef Chuck",
+    442.6,
+    433.22
+   ],
+   [
+    "Ground Beef Round",
+    462.49,
+    467.15
+   ]
+  ],
+  "importsAsof": "2026-05-29 · Aus/NZ East Coast, 0–15 day FOB/TIS",
+  "importsNote": "Import prices mostly slightly lower, instances unevenly steady vs last test; trading slowed post-Memorial Day.",
+  "imports": [
+   [
+    "Bull Meat 95%",
+    406
+   ],
+   [
+    "Cow Meat 95%",
+    403.5
+   ],
+   [
+    "Cow Meat 90%",
+    382
+   ],
+   [
+    "CFM Fores 85%",
+    361.5
+   ],
+   [
+    "Beef Trim 85%",
+    360
+   ],
+   [
+    "Beef Trim 80%",
+    324.5
+   ]
+  ]
+ },
+ "pork": {
+  "source": "LM_PK602 · Daily Pork FOB Plant (PM)",
+  "asof": "2026-05-28",
+  "carcass": 99.11,
+  "carcassChg": 0.76,
+  "loadsCuts": 288.22,
+  "loadsTrim": 47.31,
+  "avg5": 97.64,
+  "belly": 112.14,
+  "series": {
+   "labels": [
+    "5/21",
+    "5/22",
+    "5/26",
+    "5/27",
+    "5/28"
+   ],
+   "carcass": [
+    95.64,
+    96.26,
+    98.85,
+    98.35,
+    99.11
+   ]
+  },
+  "primals": [
+   [
+    "Loin",
+    93.97,
+    0.56,
+    93.92
+   ],
+   [
+    "Butt",
+    151.92,
+    1.32,
+    150.23
+   ],
+   [
+    "Picnic",
+    78.27,
+    1.69,
+    77.45
+   ],
+   [
+    "Rib",
+    182.71,
+    -4.01,
+    185.74
+   ],
+   [
+    "Ham",
+    85.19,
+    2.25,
+    82.15
+   ],
+   [
+    "Belly",
+    112.14,
+    -0.99,
+    109.3
+   ]
+  ],
+  "trim": [
+   [
+    "42% Trim Combo",
+    67.9
+   ],
+   [
+    "72% Trim Combo",
+    109.28
+   ],
+   [
+    "42% Trim Boxed",
+    109.14
+   ],
+   [
+    "72% Trim Boxed",
+    132.67
+   ],
+   [
+    "Trim w/Trace Combo",
+    69.7
+   ]
+  ]
+ },
+ "poultry": {
+  "source": "Weekly National Chicken Report",
+  "asof": "wk ending 2026-06-05",
+  "wholeComposite": 125.18,
+  "wholeChg": 0.18,
+  "breast": 137.35,
+  "breastChg": -8.37,
+  "slaughterHead": 31549000,
+  "whole": [
+   [
+    "National Composite Whole Bird",
+    125.18,
+    0.18
+   ],
+   [
+    "WOGs Composite",
+    124.25,
+    0.12
+   ],
+   [
+    "Eastern Whole Body",
+    123.36,
+    -0.24
+   ],
+   [
+    "Central Whole Body",
+    102.46,
+    -0.17
+   ],
+   [
+    "Western Whole Body",
+    143.98,
+    -0.03
+   ]
+  ],
+  "parts": [
+   [
+    "Breast — B/S",
+    137.35,
+    -8.37
+   ],
+   [
+    "Tenderloins",
+    179.07,
+    -5.16
+   ],
+   [
+    "Thighs — B/S",
+    202.5,
+    4.67
+   ],
+   [
+    "Wings — Whole",
+    82.89,
+    -0.53
+   ],
+   [
+    "Drumsticks",
+    61.95,
+    -0.54
+   ],
+   [
+    "Leg Quarters — Bulk",
+    59.91,
+    0.41
+   ],
+   [
+    "Legs — Bone-in",
+    89.39,
+    -0.3
+   ]
+  ],
+  "weightsAsof": "NASS Poultry Slaughter · Mar 2026 (monthly, released Apr 24)",
+  "weights": [
+   [
+    "Broilers (young chickens)",
+    6.61,
+    5.01,
+    75.8
+   ],
+   [
+    "Mature chickens (fowl)",
+    7.28,
+    5.26,
+    72.3
+   ],
+   [
+    "Turkeys",
+    34.41,
+    27.36,
+    79.5
+   ],
+   [
+    "Ducks",
+    7.05,
+    5.17,
+    73.3
+   ]
+  ]
+ },
+ "slaughter": {
+  "source": "Daily Livestock & Poultry Slaughter",
+  "asof": "2026-05-29",
+  "rows": [
+   [
+    "Cattle",
+    105000,
+    99000,
+    118245,
+    11166809,
+    -9.3
+   ],
+   [
+    "Hogs",
+    477000,
+    404000,
+    473237,
+    52345425,
+    -0.8
+   ],
+   [
+    "Chicken (young)",
+    31549000,
+    32030000,
+    32993000,
+    3921142000,
+    1.8
+   ],
+   [
+    "Calves",
+    1000,
+    1000,
+    559,
+    42485,
+    -20.7
+   ],
+   [
+    "Sheep",
+    3000,
+    3000,
+    5965,
+    777552,
+    -4.2
+   ]
+  ]
+ },
+ "cash": {
+  "cattleSource": "LM_CT100 · 5-Area Daily Direct (recap)",
+  "cattleAsof": "2026-06-05",
+  "hogSource": "LM_HG201 · Daily Direct Hog Prior Day",
+  "hogAsof": "2026-05-28",
+  "fowlSource": "Weekly National Fowl Market · live spent heavy fowl, SE at-farm",
+  "fowlAsof": "2026-04-03",
+  "rows": [
+   [
+    "Fed cattle — Live FOB",
+    8186,
+    1442,
+    257.05,
+    0.38
+   ],
+   [
+    "Fed cattle — Live delivered",
+    872,
+    1493,
+    259.57,
+    null
+   ],
+   [
+    "Fed cattle — Dressed delivered",
+    1053,
+    967,
+    405.5,
+    null
+   ],
+   [
+    "Hogs — Negotiated carcass base",
+    449162,
+    217.28,
+    91.06,
+    null
+   ],
+   [
+    "Hogs — Avg net price",
+    null,
+    null,
+    92.58,
+    null
+   ],
+   [
+    "Poultry — Live spent heavy fowl",
+    null,
+    7,
+    7.14,
+    null
+   ]
+  ]
+ },
+ "trade": {
+  "fasAsof": "FAS U.S. Export Sales · wk ending 2026-03-19 (published Thu) — holds until next Thursday",
+  "rows": [
+   [
+    "Beef",
+    "Net export sales",
+    "10,700 MT",
+    -19,
+    "Japan, Taiwan, S. Korea, Mexico"
+   ],
+   [
+    "Beef",
+    "Exports (shipped)",
+    "14,500 MT",
+    9,
+    "Japan, S. Korea, Taiwan, Mexico"
+   ],
+   [
+    "Pork",
+    "Net export sales",
+    "40,300 MT",
+    23,
+    "Mexico, China, Japan, S. Korea"
+   ],
+   [
+    "Pork",
+    "Exports (shipped)",
+    "39,100 MT",
+    2,
+    "Mexico, S. Korea, Japan, China"
+   ],
+   [
+    "Poultry",
+    "Export MSC — fresh FOB",
+    "22.69 ¢/lb",
+    null,
+    "Weekly Chicken Report"
+   ],
+   [
+    "Poultry",
+    "Export MSC — frozen FOB",
+    "26.28 ¢/lb",
+    null,
+    "Weekly Chicken Report"
+   ]
+  ]
+ }
+}

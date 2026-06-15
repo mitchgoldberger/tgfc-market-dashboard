@@ -83,6 +83,13 @@ td.num{ font-variant-numeric: tabular-nums; }
     <div class="updated" id="updated"></div>
   </header>
 
+  <!-- ============ DAY-ON-DAY NOTABLE MOVERS ============ -->
+  <div class="panel" id="dod-panel" style="margin-bottom:10px;display:none">
+    <h3>Day-on-Day Notable Movers <span class="pill" id="dod-asof"></span></h3>
+    <ul id="dod-list" style="margin:6px 0 0 0;padding-left:20px;line-height:1.7"></ul>
+    <div class="note" id="dod-empty" style="display:none">Cutout values steady today — no notable daily movers.</div>
+  </div>
+
   <!-- ============ WEEK-OVER-WEEK SUMMARY ============ -->
   <div class="panel" style="margin-bottom:10px"><h3>Week-over-Week Summary <span class="pill">all segments</span></h3>
     <table><thead><tr><th>Category</th><th>Latest</th><th>WoW Change</th></tr></thead><tbody id="wow"></tbody></table>
@@ -263,6 +270,70 @@ document.getElementById("beef-imports").innerHTML = b.imports.map(r=>
 document.getElementById("beef-imports-note").textContent = b.importsAsof + " — " + b.importsNote;
 document.getElementById("pork-trim").innerHTML = p.trim.map(r=>
   `<tr><td>${r[0]}</td><td class="num">${f2lb(r[1])}</td><td class="flat">—</td></tr>`).join("");
+
+/* ---- DAY-ON-DAY NOTABLE MOVERS ---- */
+(function(){
+  const movers = [];
+  const fmtCwt = v => (v>0?"+":"") + "$" + (v/100).toFixed(2) + "/lb";
+  const fmtCt  = v => (v>0?"+":"") + "$" + (v/100).toFixed(2) + "/lb";
+  const arrow  = v => v>0 ? "▲" : (v<0 ? "▼" : "—");
+  const cls    = v => v>0 ? "up" : (v<0 ? "down" : "flat");
+
+  if (DATA.beef) {
+    if (typeof DATA.beef.choiceChg === "number" && Math.abs(DATA.beef.choiceChg) >= 0.5) {
+      movers.push({label:"Beef Choice cutout", v:DATA.beef.choiceChg, fmt:fmtCwt});
+    }
+    if (typeof DATA.beef.selectChg === "number" && Math.abs(DATA.beef.selectChg) >= 0.5) {
+      movers.push({label:"Beef Select cutout", v:DATA.beef.selectChg, fmt:fmtCwt});
+    }
+  }
+  if (DATA.pork) {
+    if (typeof DATA.pork.carcassChg === "number" && Math.abs(DATA.pork.carcassChg) >= 0.5) {
+      movers.push({label:"Pork carcass cutout", v:DATA.pork.carcassChg, fmt:fmtCwt});
+    }
+    if (Array.isArray(DATA.pork.primals)) {
+      DATA.pork.primals.forEach(p => {
+        if (typeof p[2] === "number" && Math.abs(p[2]) >= 1.0) {
+          movers.push({label:"Pork " + p[0] + " primal", v:p[2], fmt:fmtCwt});
+        }
+      });
+    }
+  }
+  if (DATA.poultry) {
+    if (typeof DATA.poultry.breastChg === "number" && Math.abs(DATA.poultry.breastChg) >= 2.0) {
+      movers.push({label:"Poultry B/S breast", v:DATA.poultry.breastChg, fmt:fmtCt});
+    }
+    if (typeof DATA.poultry.wholeChg === "number" && Math.abs(DATA.poultry.wholeChg) >= 1.0) {
+      movers.push({label:"Poultry whole bird composite", v:DATA.poultry.wholeChg, fmt:fmtCt});
+    }
+  }
+
+  movers.sort((a,b) => Math.abs(b.v) - Math.abs(a.v));
+  const top = movers.slice(0, 5);
+
+  const panel = document.getElementById("dod-panel");
+  if (panel) {
+    panel.style.display = "";
+    const beefAsof = DATA.beef && DATA.beef.asof;
+    const porkAsof = DATA.pork && DATA.pork.asof;
+    const asofEl = document.getElementById("dod-asof");
+    asofEl.textContent = beefAsof || porkAsof
+      ? "beef " + (beefAsof || "—") + " · pork " + (porkAsof || "—")
+      : "";
+    const list  = document.getElementById("dod-list");
+    const empty = document.getElementById("dod-empty");
+    if (top.length) {
+      list.innerHTML = top.map(m =>
+        '<li><strong>' + m.label + '</strong> ' +
+        '<span class="' + cls(m.v) + '">' + arrow(m.v) + ' ' + m.fmt(m.v) + '</span></li>'
+      ).join("");
+      empty.style.display = "none";
+    } else {
+      list.innerHTML = "";
+      empty.style.display = "";
+    }
+  }
+})();
 
 /* ---- WEEK-OVER-WEEK SUMMARY ---- */
 // Convert the pre-formatted value strings ("$393.62/cwt" or "125.18$/lb") to $/lb.
